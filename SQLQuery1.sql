@@ -17,13 +17,13 @@ CREATE TABLE [table_groups]
     [Id] INT PRIMARY KEY NOT NULL,
     [Name] NVARCHAR(10) NOT NULL UNIQUE,
     [Rating] INT NOT NULL CHECK ([Rating] >= 0 AND [Rating] <= 5),
-    [Year] INT NOT NULL CHECK ([Year] >= 0 AND [Year] <= 5) -- Поле змінено з [YEAR] на [Year], оскільки YEAR є ключовим словом в SQL
+    [Year] INT NOT NULL CHECK ([Year] >= 0 AND [Year] <= 5) 
 );
 
 CREATE TABLE [Departments]
 (
     [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-    [Financing] MONEY NOT NULL CHECK ([Financing] >= 0), -- Значення за замовчуванням для money типу не потрібне, оскільки він не може містити null
+    [Financing] MONEY NOT NULL CHECK ([Financing] >= 0), 
     [Name] NVARCHAR(100) NOT NULL UNIQUE
 );
 
